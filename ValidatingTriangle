@@ -1,0 +1,41 @@
+/*
+ *Program Name:	ValidatingTriangle.java
+ *Author:		Bruno Bersano Morelli
+ *Date:		January 26, 2016
+ *Course:		CPSC 1150 - 1
+ *Instructor:	Mingwu Chen
+*/
+
+import java.util.Scanner;
+
+// Purpose:  Validating triangle by summing 2 of its edges
+public class ValidatingTriangle  {
+  
+// main method
+  public static void main(String[] args) {
+
+//Get the first edge of the triangle:
+Scanner input1 = new Scanner(System.in); // Create a scanner
+System.out.print("Enter the first edge length: "); //Prompt the user for input
+double firstEdge = input1.nextDouble(); 
+
+//Get the second  edge of the triangle:
+Scanner input2 = new Scanner(System.in); // Create a scanner
+System.out.print("Enter the second edge length: "); //Prompt the user for input
+double secondEdge = input2.nextDouble();      
+
+//Get the third  edge of the triangle:
+Scanner input3 = new Scanner(System.in); // Create a scanner
+System.out.print("Enter the third edge length: "); //Prompt the user for input
+double thirdEdge = input3.nextDouble();      
+
+//Create a Boolean Expression to Validate the Triangle
+boolean triangle = (((firstEdge+secondEdge) > thirdEdge) && (firstEdge+thirdEdge) > secondEdge && (secondEdge+thirdEdge) > firstEdge);
+     
+//Display Result
+System.out.println("Can edges "+ firstEdge + ", " + secondEdge + ", and " + thirdEdge +" form a triangle?" + " "+ triangle);
+ 
+   }
+}
+ 
+ 
