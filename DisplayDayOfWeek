@@ -1,0 +1,56 @@
+/*
+ *Program Name:	DisplayDayOfWeek.java
+ *Author:		Bruno Bersano Morelli
+ *Date:		January 26, 2016
+ *Course:		CPSC 1150 - 1
+ *Instructor:	Mingwu Chen
+*/
+
+import javax.swing.JOptionPane;
+
+// Purpose:  Display the day of the week 
+public class DisplayDayOfWeek  {
+     
+   // main method
+     public static void main(String[] args) {
+
+      // Get the user to input a number between 0 and 6
+      String dayString = JOptionPane.showInputDialog(null, 
+      "Enter a number between 0 abd 6", "Display the Day of the Week", 
+       JOptionPane.QUESTION_MESSAGE);
+
+      // Convert the string to an integer value
+      int day = Integer.parseInt(dayString);
+      
+      // Validate the integer and atribute the corresponding day of the week
+      if (day < 0 || day > 6) //Validate the Integer
+         JOptionPane.showMessageDialog (null, "Please enter a single digit number between 0 and 6");
+      else  //Atribute the corresponding day of the week
+         {
+            if (day == 0)
+               JOptionPane.showMessageDialog (null, "Sunday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+            if (day == 1)
+               JOptionPane.showMessageDialog (null, "Monday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+            if (day == 2)
+               JOptionPane.showMessageDialog (null, "Tuesday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+            if (day == 3)
+               JOptionPane.showMessageDialog (null, "Wednesday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+            if (day == 4)
+               JOptionPane.showMessageDialog (null, "Thursday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+            if (day == 5)
+               JOptionPane.showMessageDialog (null, "Friday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+            if (day == 6)
+               JOptionPane.showMessageDialog (null, "Saturday",
+		"Display Day of the Week", JOptionPane.INFORMATION_MESSAGE);
+         }
+     
+     
+  }
+  }
+  
