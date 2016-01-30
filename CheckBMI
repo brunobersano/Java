@@ -1,0 +1,41 @@
+/*
+ *Program Name:	CheckBMI.java
+ *Author:		Bruno Bersano Morelli
+ *Date:		January 26, 2016
+ *Course:		CPSC 1150 - 1
+ *Instructor:	Mingwu Chen
+*/
+
+import java.util.Scanner;
+
+// Purpose:  Check a person’s body mass index  
+public class CheckBMI  {
+  
+   // main method
+   public static void main(String[] args) {
+
+      //Get the weight
+      Scanner getWeight = new Scanner(System.in); 
+      System.out.print("Enter your weight in kg: "); 
+      double weight = getWeight.nextDouble(); 
+
+      //Get the height
+      Scanner getHeight = new Scanner(System.in); 
+      System.out.print("Enter your height in meters: ");  
+      double height = getHeight.nextDouble(); 
+
+      //Check if input is positive
+      double bmi= weight / (height * height);
+      if (weight <= 0 || height <= 0)
+         System.out.println("Please Enter Positive Numbers Only");
+      else if (bmi < 20)  //Create a message for underweight users, with BMI lower than 20
+         System.out.println("You are underweight. Your BMI is " + bmi );
+      else if (bmi > 25)  //Create a message for overweight users, with BMI higher than 25
+         System.out.println("You are overweight. Your BMI is " + bmi );
+      else   //Create a message for normal users, with BMI between 20 and 25
+         System.out.println("Your BMI is Normal. Your BMI is " + bmi );
+      
+
+      }
+        
+     }
